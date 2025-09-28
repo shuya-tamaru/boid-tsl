@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/faviconShader.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble TSL</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://shuya-tamaru.github.io/bubble-tsl/"
+    />
+    <meta property="og:title" content="Bubble TSL - Three.js" />
+    <meta property="og:description" content="Bubble TSL" />
+    <meta
+      property="og:image"
+      content="https://shuya-tamaru.github.io/bubble-tsl/thumbnail.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://shuya-tamaru.github.io/bubble-tsl/"
+    />
+    <meta name="twitter:title" content="Bubble TSL - Three.js" />
+    <meta name="twitter:description" content="Bubble TSL" />
+    <meta
+      name="twitter:image"
+      content="https://shuya-tamaru.github.io/bubble-tsl/thumbnail.png"
+    />
+    <meta name="twitter:image:alt" content="Bubble TSL" />
+
+    <!-- Additional meta tags -->
+    <meta name="description" content="Bubble TSL" />
+    <meta
+      name="keywords"
+      content="Three.js, WebGPU, TSL, Bubble,  JavaScript, TypeScript"
+    />
+    <meta name="author" content="Shuya Tamaru" />
+    <style>
+      #spinner {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin: -25px 0 0 -25px; /* 中央寄せ */
+        border: 6px solid rgba(255, 255, 255, 0.3); /* 薄い色の円 */
+        background: "#000"; /* 背景は透明 */
+        border-top: 6px solid #fff; /* 上だけ白にして動きを出す */
+        border-radius: 50%; /* 丸くする */
+        animation: spin 1s linear infinite;
+        z-index: 9999;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="spinner"></div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
